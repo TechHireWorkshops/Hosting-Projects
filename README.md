@@ -1,6 +1,6 @@
 # Hosting Projects
 
-There are many options out there for hosting project, both front and back end, so how do you decide where to host your projects.  There are plenty of good choices, and much of it comes down to personal preference.  Let's look at some of these options, as well as some tips and guidelines to follow to make sure you're protected and giving yourself the right add-ons for logging and use.
+There are many options out there for hosting project, both front and back end, and it decide where to host your projects.  There are plenty of good choices, and much of it comes down to personal preference.  Let's look at some of these options, as well as some tips and guidelines to follow to make sure you're protected and can freely update your sites.
 
 ## Front-End
 
@@ -14,7 +14,7 @@ Head to the settings of the project you want to host, and scroll down to the Git
 
 ![](./images/gitpages1.png)
 
-Select the branch you want to upload (likely master), press save, and in a few minutes your site will be published at the address they provide.
+Select the branch you want to upload (likely master or main), press save, and in a few minutes your site will be published at the address they provide.
 
 ![](./images/gitpages2.png)
 
@@ -28,17 +28,17 @@ Then we head to our google domain site, and manage our domain.  We want to head 
 
 ![](./images/gitpages4.png)
 
-From there, we need to scroll down to our Custom resource records section, and add CNAME files.
+From there, we need to scroll down to our Custom resource records section, and add some CNAME files.
 
 ![](./images/gitpages5.png)
 
-The "Name" section has to do with the subdomain of the URL, which is mostly often 'www'.  We can also add a '*', or wildcard, subdomain to make sure that any subdomain will work.  The "Data" section of the CNAME record must be set to <your GitHub username or organization>.github.io.
+The "Name" section has to do with the subdomain of the URL, which is most often 'www'.  We can also add a '*', or wildcard, subdomain to make sure that any subdomain will work.  The "Data" section of the CNAME record must be set to <your GitHub username or organization>.github.io.
 
 ### Surge
 
 Surge is another free and easy way to host your projects online.  Like GitHub, it provides free SSL certification, gives you unlimited projects, supports custom domains, and is easy to use.
 
-To start, we need to install surge on our command line.  We need to make sure that we have Node and npm You can do that [here](https://nodejs.org/en/download/package-manager/#macos).  We then run:
+To start, we need to install surge in our command line.  We need to make sure that we have Node and npm (especially if we'll be using React). You can do that [here](https://nodejs.org/en/download/package-manager/#macos).  We then run:
 
 	npm install --global surge
 	
@@ -86,7 +86,7 @@ These are very few of the many options out there.  Play around with other hostin
 
 ## Back-End
 
-Back-end app hosting gets more complicated than front-end. We need to make sure that we've uploaded both our API and our database, and that they can communicate with each other (and our front-end app).  Because many of our sites can accept and store user data in our back end, we also need to be careful when making changes to our back-end app, as we don't want to corrupt of delete user data.
+Back-end app hosting gets more complicated than front-end. We need to make sure that we've uploaded both our API and our database, and that they can communicate with each other (and our front-end app).  Because many of our sites can accept and store user data in our back end, we also need to be careful when making changes to our back-end app, as we don't want to corrupt or delete user data.
 
 As with front-end, there are many options for hosting.  Today, we'll be talking about Heroku.
 
@@ -126,7 +126,7 @@ Heroku is deployed to using the same method that we use for git.  Once we've cre
 
 Once we've added heroku to our projects using 
 	
-	$ heroku git:remote -a techhire-hosting
+	$ heroku git:remote -a <Project Name>
 
 We can upload our projects to heroku in a similar way that we push them to GitHub, like so:
 
@@ -134,7 +134,7 @@ We can upload our projects to heroku in a similar way that we push them to GitHu
 	git commit -m "some comments here"
 	git push heroku master
 	
-Once we've uploaded our projects, we usually need to configure then or initialize our database.  Depending on our language, we need to do different things.  Check out these articles below for information on how to upload different languages to heroku.
+Once we've uploaded our projects, we usually need to configure them or initialize our database.  Depending on our language, we need to do different things.  Check out these articles below for information on how to upload different languages to heroku.
 
 [Spring Boot](https://www.callicoder.com/deploy-host-spring-boot-apps-on-heroku/)
 [Rails](https://www.codecademy.com/articles/deploy-rails-to-heroku)
