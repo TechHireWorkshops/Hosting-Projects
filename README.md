@@ -18,9 +18,9 @@ Select the branch you want to upload (likely master), press save, and in a few m
 
 ![](./images/gitpages2.png)
 
-#### Using a custom domain with github pages
+#### Using a custom domain with GitHub pages
 
-We can use this hosted site on a custom domain that we own. We start by setting the custom domain of our github pages site to our custom URL.
+We can use this hosted site on a custom domain that we own. We start by setting the custom domain of our GitHub pages site to our custom URL.
 
 ![](./images/gitpages3.png)
 
@@ -32,11 +32,11 @@ From there, we need to scroll down to our Custom resource records section, and a
 
 ![](./images/gitpages5.png)
 
-The "Name" section has to do with the subdomain of the URL, which is mostly often 'www'.  We can also add a '*', or wildcard, subdomain to make sure that any subdomain will work.  The "Data" section of the CNAME record must be set to <your github username or organization>.github.io.
+The "Name" section has to do with the subdomain of the URL, which is mostly often 'www'.  We can also add a '*', or wildcard, subdomain to make sure that any subdomain will work.  The "Data" section of the CNAME record must be set to <your GitHub username or organization>.github.io.
 
 ### Surge
 
-Surge is another free and easy way to host your projects online.  Like github, it provides free SSL certification, gives you unlimited projects, supports custom domains, and is easy to use.
+Surge is another free and easy way to host your projects online.  Like GitHub, it provides free SSL certification, gives you unlimited projects, supports custom domains, and is easy to use.
 
 To start, we need to install surge on our command line.  We need to make sure that we have Node and npm You can do that [here](https://nodejs.org/en/download/package-manager/#macos).  We then run:
 
@@ -62,7 +62,7 @@ Now our domain will automatically be set to what we specify in our CNAME.
 
 #### Using a custom domain with surge
 
-Deploying our surge site to a custom URL is a similar process to doing so with github pages.  We set custom resource records on our domain provider, just like we did before, though this time we use A records instead of CNAME.  A records point to ip addresses, whereas CNAME records point to URLs.
+Deploying our surge site to a custom URL is a similar process to doing so with GitHub pages.  We set custom resource records on our domain provider, just like we did before, though this time we use A records instead of CNAME.  A records point to ip addresses, whereas CNAME records point to URLs.
 
 ![](./images/surge3.png)
 
@@ -128,13 +128,13 @@ Once we've added heroku to our projects using
 	
 	$ heroku git:remote -a techhire-hosting
 
-We can upload our projects to heroku in a similar way that we push them to github, like so:
+We can upload our projects to heroku in a similar way that we push them to GitHub, like so:
 
 	git add .
 	git commit -m "some comments here"
 	git push heroku master
 	
-Once we've uploaded our projects, we usually need to configure then or initialize our database.  Depending on our langauge, we need to do different things.  Check out these articles below for information on how to upload different languages to heroku.
+Once we've uploaded our projects, we usually need to configure then or initialize our database.  Depending on our language, we need to do different things.  Check out these articles below for information on how to upload different languages to heroku.
 
 [Spring Boot](https://www.callicoder.com/deploy-host-spring-boot-apps-on-heroku/)
 [Rails](https://www.codecademy.com/articles/deploy-rails-to-heroku)
@@ -142,7 +142,7 @@ Once we've uploaded our projects, we usually need to configure then or initializ
 
 #### Add-ons
 
-We also often need add-ons to help run our database.  In the picture below, I've deployed a Rails app that uses postgreSQL, which requires the Heroku Postgres add-ons.  Usually, Heroku will add the neccessary add-ons automatically.  These add-ons are by default free, but usually have improved versions that offer higher capacity databases and higher speeds.
+We also often need add-ons to help run our database.  In the picture below, I've deployed a Rails app that uses PostgreSQL, which requires the Heroku Postgres add-ons.  Usually, Heroku will add the necessary add-ons automatically.  These add-ons are by default free, but usually have improved versions that offer higher capacity databases and higher speeds.
 
 ![](./images/heroku4.png)
 
